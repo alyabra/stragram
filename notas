@@ -1,0 +1,56 @@
+migrationes
+sail php artisan migrationessail artisan make:migration agregar_imagen
+
+sail artisan make:migration add_raitings_to_products_table
+
+luego ay que coorrer la migracion con 
+sail artisan migrate
+
+Eloquent es el ORM de laravel
+    ->sail php artisan make:model Cliente
+    ->convenciones
+    en prural
+
+para regresar una migracion
+sail artisan migrate:rollback --step=1
+
+Añadiro controladores
+
+sail php artisan make::controles PostController
+
+Route
+
+crear un modelo
+sail artisan make:model Post
+--Crear migracion
+sail artisan make:migration create_post_table
+
+todo en 1
+
+
+Para generar datos de montosn
+sail artisan make:model --migration --factory Post
+
+sail artisan tinker
+
+Para crear muchos post
+App\Models\Post::factory()->times(200)->create();
+
+spoony para utilizar metodos diferente al get y al post los cuales son los unicos que add_raitings_to_products_table
+
+crear una ploicy
+sail artisan make:policy PostPolicy --model=Post
+
+
+ver lista de rutas 
+sail artisan route:list
+
+
+Jerarqui de las rutas poner variables al final.> borrar cache
+
+boorar vistas y cache
+ sail artisan view:clear
+
+ LIWIWIRE->MANIPULAR DOM
+COMNADO
+ sail composer require livewire/livewire
